@@ -1,7 +1,10 @@
 :root{
     --red: #cc0000;
+    --blue: #008bcc;
+    --blue-dark: #005c99;
+    --blue-light: #00bfff;
     --dark-red: #990000;
-    --gold: #d4af37;
+    --gold: #c5a859;
     --gold-light: #f5d76e;
     --gray-dark: #1a1a1a;
     --gray: #2d2d2d;
@@ -11,7 +14,7 @@
 
 body{
     margin:0;
-    font-family:'Inter', Arial, sans-serif;
+    font-family: "Source Sans 3", sans-serif;
     font-size:clamp(16px, 1.2vw, 18px);
 
     color:white;
@@ -35,8 +38,8 @@ body{
 .banner{
     background:
         linear-gradient(
-            rgba(204,0,0,.75),
-            rgba(153,0,0,.85)
+            rgba(0, 139, 204, 0.75),
+            rgba(0, 92, 153, 0.85)
         ),
         url("images/banner-background.jpeg");
 
@@ -49,15 +52,24 @@ body{
 }
 
 .banner h1{
+    font-family:"Cinzel", serif;
+    font-size:clamp(2.5rem, 5vw, 4rem);
+    font-weight:700;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:white;
     margin:0;
-    font-size:clamp(2rem, 5vw, 3.5rem);
+    text-shadow:
+        2px 2px 8px rgba(0,0,0,.45),
+        0 0 8px rgba(212,175,55,.30);
 }
 
 /* ================ Navigation ================= */
 
 nav{
-    background:#990000;
+    background:#006e99;
     padding:12px 0;
+    border-bottom:3px solid var(--gold);
 }
 
 nav ul{
@@ -91,6 +103,7 @@ nav a{
     padding:12px 24px;
     color:white;
     text-decoration:none;
+    font-weight:bold;
 }
 
 nav a::after{
@@ -117,8 +130,20 @@ nav a:hover{
 /* ================ Hero Section ================= */
 
 .hero{
-    padding:60px 20px;
+    max-width:900px;
+    margin:60px auto;
+    padding:40px;
     text-align:center;
+
+    background:rgba(20,20,20,0.70);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:1px solid rgba(212,175,55,.35);
+    border-radius:15px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
 }
 
 .hero h2{
@@ -140,6 +165,7 @@ nav a:hover{
     justify-content:center;
     gap:20px;
     padding:40px 20px;
+    text-align:center;
 }
 
 .card{
@@ -148,7 +174,7 @@ nav a:hover{
     padding:20px;
     border-radius:10px;
 
-    background:#b30000;
+    background: var(--blue);
     border:2px solid var(--gold);
 
     transition:0.3s;
@@ -157,7 +183,7 @@ nav a:hover{
 
 .card:hover{
     transform:translateY(-8px);
-    background:#d10000;
+    background: var(--blue-light);
     box-shadow:0 10px 20px rgba(0,0,0,0.35);
 }
 
@@ -177,15 +203,20 @@ footer{
     margin-top:60px;
     padding:40px 20px;
 
-    background:#111;
-
-    border-top:3px solid #d4af37;
+    background: linear-gradient(
+        var(--blue-dark),
+        var(--blue)
+    );
+    background-size:cover;
+    background-position:center;
+    
+    border-top:3px solid var(--gold);
 
     text-align:center;
 }
 
 footer h3{
-    color:#d4af37;
+    color:var(--gold);
     margin-bottom:20px;
     font-size:1.6rem;
 }
@@ -236,6 +267,11 @@ img{
     height:auto;
 }
 
+.icon{
+    width:36px;
+    height:33px;
+}
+
 /* ===========================
    Tablet (768px and below)
 =========================== */
@@ -282,7 +318,7 @@ img{
 
     /* Add horizontal separators */
     nav li:not(:last-child){
-        border-bottom:1px solid #ff6666;
+        border-bottom:1px solid var(--gold);
     }
 
     nav a{
