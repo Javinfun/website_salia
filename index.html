@@ -20,7 +20,7 @@
 
     <nav>
         <ul>
-            <li><a href="#">Services</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="info.html">Information</a></li>
             <li><a href="https://www.google.com/maps/place/Walker+Mobile+Notary/@34.3134239,-118.814376,8z/data=!4m6!3m5!1s0x21ae4e1ecfcb2727:0xa8c6f818497d11e3!8m2!3d34.3134239!4d-118.814376!16s%2Fg%2F11z59mqtjm?entry=ttu&g_ep=EgoyMDI2MDgxMS4wIKXMDSoASAFQAw%3D%3D">Google Business</a></li>
         </ul>
@@ -31,27 +31,30 @@
 
 <section class="hero">
     <h2>Welcome!</h2>
-    <p>At Walker Mobile Notary, we believe exceptional service begins with trust. Every appointment is approached with professionalism, attention to detail, and genuine respect for our clients. Whether you're meeting us for a routine notarization or during an important life event, our goal is to provide a calm, efficient, and dependable experience from start to finish.
+    <p>At Walker Mobile Notary, we believe exceptional service begins with trust. Every appointment is approached with professionalism, attention to detail, and genuine respect for our clients. Whether a meeting is for a routine notarization or during an important life event, our goal is to provide a calm, efficient, and dependable experience from start to finish.
 
 We understand that every signature represents something important, and we're honored to assist our clients with the care and professionalism they deserve.</p>
 </section>
 
-<section class="cards">
+<section id="services" class="cards">
 
-    <div class="card">
+    <a href="mailto:youremail@example.com" class="card" onclick="copyText('youremail@example.com'); return false;">
         <h3>Email</h3>
-        <p>Send questions or documents securely before your appointment.</p>
-    </div>
+        <p>Have any questions? Feel free to contact us with an email for any inquiries!</p>
+    </a>
 
-    <div class="card">
-        <h3>Schedule</h3>
-        <p>Book a notary appointment at a time that works best for you.</p>
-    </div>
+    <a href="https://calendly.com/walker-mobile-notary/mobile-notary-appointment?month=2026-08"
+       class="card"
+       target="_blank"
+       rel="noopener">
+        <h3>Schedule an Appointment</h3>
+        <p>Book your appointment online at Calendly</p>
+    </a>
 
-    <div class="card">
+    <a href="tel:+18184519785" class="card" onclick="copyText('(818) 451-9785'); return false;">
         <h3>Call</h3>
-        <p>Speak directly with a notary for immediate assistance or availability.</p>
-    </div>
+        <p>Try calling us for immediate assistance! We hope to hear from you soon.</p>
+    </a>
 
 </section>
 
@@ -73,14 +76,6 @@ We understand that every signature represents something important, and we're hon
 
         <a href="https://linkedin.com/company/YourCompany" target="_blank" aria-label="LinkedIn">
             <img class="icon" src="images/linkedin.png" alt="LinkedIn">
-        </a>
-
-        <a href="mailto:your@email.com" aria-label="Email">
-            <img class="icon" src="images/email.png" alt="Email">
-        </a>
-
-        <a href="tel:+18185551234" aria-label="Phone">
-            <img class="icon" src="images/phone.png" alt="Phone">
         </a>
 
     </div>
