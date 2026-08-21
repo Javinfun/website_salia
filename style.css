@@ -1,9 +1,9 @@
 :root{
     --red: #cc0000;
     --dark-red: #990000;
-    --blue: #008bcc;
-    --blue-dark: #005c99;
-    --blue-light: #00bfff;
+    --blue: #1db1f5;
+    --blue-dark: #047ecf;
+    --blue-light: #5ed7ff;
     --gold: #c5a859;
     --gold-light: #f5d76e;
     --silver: #cccccc;
@@ -12,6 +12,14 @@
     --gray: #2d2d2d;
     --accent: var(--silver);
     --accent-light: var(--silver-light);
+}
+
+.section-divider{
+    width:150px;
+    height:4px;
+    margin:30px auto;
+    background: white;
+    border-radius:999px;
 }
 
 /* ==================== Global Styles =========================== */
@@ -30,8 +38,8 @@ body{
 
     background:
         linear-gradient(
-            rgba(26,26,26,0.80),
-            rgba(26,26,26,0.80)
+            rgba(26, 26, 26, 0.151),
+            rgba(26, 26, 26, 0.137)
         ),
         url("images/notary-background.png");
 
@@ -46,8 +54,8 @@ body{
 .banner{
     background:
         linear-gradient(
-            rgba(0, 139, 204, 0.75),
-            rgba(0, 92, 153, 0.85)
+            rgba(2, 169, 247, 0.75),
+            rgba(0, 114, 190, 0.85)
         ),
         url("images/banner-background.jpeg");
 
@@ -75,8 +83,12 @@ body{
 /* ================ Navigation ================= */
 
 nav{
-    background:#006e99;
+    background:linear-gradient(
+            rgb(2, 169, 247),
+            rgb(0, 153, 255)
+        );
     padding:12px 0;
+    border-top:3px solid var(--accent);
     border-bottom:3px solid var(--accent);
 }
 
@@ -143,7 +155,7 @@ nav a:hover{
     padding:40px;
     text-align:center;
 
-    background:rgba(20,20,20,0.70);
+    background:rgba(20, 20, 20, 0.877);
 
     backdrop-filter:blur(10px);
     -webkit-backdrop-filter:blur(10px);
@@ -208,6 +220,29 @@ nav a:hover{
     font-size:clamp(0.95rem, 2vw, 1.05rem);
 }
 
+/* ================= Map ==================== */
+
+.map-wrap{
+    width:100%;
+    max-width:1000px;
+    margin:20px auto 0;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 8px 24px rgba(0,0,0,0.35);
+}
+
+.map-wrap iframe{
+    display:block;
+    width:100%;
+    height:300px;
+}
+
+@media (min-width: 768px){
+    .map-wrap iframe{
+        height:400px;
+    }
+}
+
 /* ================= Footer ==================== */
 
 footer{
@@ -226,8 +261,46 @@ footer{
     text-align:center;
 }
 
+.footer-grid{
+    display:grid;
+    grid-template-columns:repeat(2, minmax(250px, 1fr));
+    gap:30px;
+    max-width:1000px;
+    margin:0 auto;
+    padding:20px;
+}
+
+.footer-grid h3{
+    color:white;
+    margin-bottom:12px;
+}
+
+.footer-grid-list{
+    list-style:none;
+    padding:0;
+    margin:0;
+    display:grid;
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    gap:8px 20px;
+}
+
+.footer-grid-list li{
+    padding:6px 0;
+    border-bottom:1px solid rgba(212,175,55,0.25);
+}
+
+@media (max-width: 700px){
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid-list{
+        grid-template-columns:1fr;
+    }
+}
+
 footer h3{
-    color:var(--accent);
+    color:white;
     margin-bottom:20px;
     font-size:1.6rem;
 }
@@ -267,8 +340,25 @@ footer h3{
 }
 
 footer p{
-    color:#cccccc;
-    font-size:0.9rem;
+    color:white;
+    font-size:1.0rem;
+}
+
+/* ========== Info Page ============== */
+
+.copy-link{
+    background:none;
+    border:none;
+    padding:0;
+    color:#20eefd;
+    font:inherit;
+    font-weight:700;
+    cursor:pointer;
+    text-decoration:underline;
+}
+
+.copy-link:hover{
+    color:#ffffff;
 }
 
 /* ========== Images ============== */
