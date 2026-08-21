@@ -22,6 +22,16 @@ html{
 }
 
 body{
+    background-attachment: scroll;
+}
+
+@media (max-width: 768px){
+    body{
+        background-attachment: scroll;
+    }
+}
+
+body{
     margin:0;
     font-family: "Source Sans 3", sans-serif;
     font-size:clamp(16px, 1.2vw, 18px);
