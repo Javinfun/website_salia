@@ -14,21 +14,23 @@
     --accent-light: var(--silver-light);
 }
 
+.bg-layer{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-image:url("images/your-background.jpg");
+    background-size:cover;
+    background-position:center;
+    z-index:-1;
+    transform:translateY(0);
+}
 
 /* ==================== Global Styles =========================== */
 
 html{
     scroll-behavior:smooth;
-}
-
-body{
-    background-attachment: scroll;
-}
-
-@media (max-width: 768px){
-    body{
-        background-attachment: scroll;
-    }
 }
 
 body{
