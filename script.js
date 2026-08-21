@@ -4,7 +4,7 @@ window.addEventListener("scroll", () => {
     const scrolled = window.scrollY;
     const bg = document.querySelector(".bg-layer");
     if (bg) {
-        bg.style.transform = `translateY(${scrolled * 0.25}px)`;
+        bg.style.transform = `translateY(${scrolled * 0.001}px)`;
     }
 });
 
