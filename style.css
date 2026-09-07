@@ -64,7 +64,7 @@ body::before{
 
     background-size:cover;
     background-position:center;
-    background-repeat:repeat;
+    background-repeat:no-repeat;
 
     transform:translateZ(0);
 }
